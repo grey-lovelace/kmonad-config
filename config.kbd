@@ -264,6 +264,7 @@
   nav  (layer-toggle navigation) ;; Bind num to a button that switches to a layer
   num  (layer-toggle numbers) ;; Bind num to a button that switches to a layer
   mt  (multi-tap 150 @nav @num)
+  escnav (tap-hold-next-release 200 esc @nav)
   spcsft (tap-hold-next-release 200 space lsft)
   vdr M-C-right
   vdl M-C-left
@@ -323,11 +324,11 @@
 
 
 (deflayer qwerty
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  @nav a    s    d    f    g    h    j    k    l    ;    '    ret
-  lctl z    x    c    v    b    n    m    ,    .    /    grv
-  lsft lmet lalt           @spcsft        ralt rmet cmp  rctl
+  grv     1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab     q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @escnav a    s    d    f    g    h    j    k    l    ;    '    ret
+  lctl    z    x    c    v    b    n    m    ,    .    /    grv
+  lsft    lmet lalt           @spcsft        ralt rmet cmp  rctl
 )
 
 
